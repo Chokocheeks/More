@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Poppins Regular";
+  src: url("/Poppins-Regular.d44cc21c.woff2") format("woff2"), url("/Poppins-Regular.abe5ea77.ttf") format("opentype");
+  font-display: fallback;
+}
+body {
+  background-color: #EACCCD;
+  color: #E2999A;
+  font-family: Poppins Regular;
+}
+
+/*# sourceMappingURL=/styles.434540e1.css.map */
