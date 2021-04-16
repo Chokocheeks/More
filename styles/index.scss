@@ -1,7 +1,174 @@
 @import "colors";
 @import "fonts";
+
+*{
+    box-sizing: border-box;
+}
 body{
-    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    height: 100vh;
+    margin: 0;
+    
+    
     color: $text;
     font-family: Poppins Regular;
+    
+}
+h1{
+    max-width: 260px;
+    margin: 0;
+    margin-bottom: -20px;
+    font-family: "Abril_Fatface", serif;
+    color: $main;
+    font-size: 100px;
+    line-height: 0.96;
+    font-weight: 400;
+}
+.navigation,
+.bottom, 
+.interactive{
+    display: flex;
+    justify-content: space-between;
+}
+.navigation{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 30px;
+    padding-left: 52px;
+    padding-right: 130px;
+    z-index: 10;
+    color: $link;
+    .interactive{
+        align-items: center;
+        .menu{
+            position: relative;
+            margin-right: 30px;
+            width: 20px;
+            height: 1px;
+            border: 1px solid $link;color: $link;
+            &:before{
+                content: '';
+                border: 1px solid $link;color: $link;
+                transform: rotate(90deg);
+            }
+            &::after{
+                content: '';
+                border: 1px solid $link;color: $link;
+            }
+        }
+        .busket{
+            position: relative;
+            width: 14px;
+            height: 12px;
+            border: 2px solid $link;
+            margin-left: 30px;
+            background-color: $background;
+            &::after{
+                content: '';
+                position: absolute;
+                top: -6px;
+                left: 0;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                border: 2px solid $link;
+                z-index: -1;
+            }
+        }
+    }
+}
+.logo{
+    font-family: "Abril_Fatface", serif;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 13px;
+}
+.bottom{
+    position: absolute;
+    top: 0;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 48px 0 57px 52px;
+    background-color: $background;
+    transition: all 0.7s ease-out;
+    &.item1{
+        left: 0;
+        background-image: url('../img/back-1.png');
+    }
+    &.item2{
+        left: 100%;
+        background-image: url('../img/back-2.png');
+    }
+    &.item3{
+        left: 200%;
+        background-image: url('../img/back-3.png');
+    }
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+}
+.title{
+    display: flex;
+    align-items: flex-end;
+    color: $link;   
+}
+.btn{
+    margin-left: 30px;
+    padding: 20px 30px;
+    font-family: "Abril_Fatface", serif;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: $main;
+    background: linear-gradient(to right, $text 50%, $main 50%);
+    background-position: 100% center;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    color: $link;
+    border: none;
+    transition: all 0.2s ease-in;
+    &:hover{
+        cursor: pointer;
+        color: $main;
+        background-position: 0 center;
+    }
+}
+
+.gallery{
+    list-style-type: none;
+    display: flex;
+    width: 410px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    &-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 60px;
+        background-color: $main;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-family: "Abril_Fatface", serif;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 131.1%;
+        }
+        p{
+            font-family: Poppins;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 141.4%;
+        }
+    }
+    
 }
