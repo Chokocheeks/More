@@ -3,10 +3,196 @@
   src: url("/Poppins-Regular.d44cc21c.woff2") format("woff2"), url("/Poppins-Regular.abe5ea77.ttf") format("opentype");
   font-display: fallback;
 }
+@font-face {
+  font-family: "Abril_Fatface";
+  src: url("/AbrilFatface-Regular.c6b1eaf2.woff2") format("woff2"), url("/AbrilFatface-Regular.ed8f56d0.ttf") format("opentype");
+  font-display: fallback;
+}
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #EACCCD;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+  height: 100vh;
+  margin: 0;
   color: #E2999A;
   font-family: Poppins Regular;
+}
+
+h1 {
+  max-width: 260px;
+  margin: 0;
+  margin-bottom: -20px;
+  font-family: "Abril_Fatface", serif;
+  color: #ffff;
+  font-size: 100px;
+  line-height: 0.96;
+  font-weight: 400;
+}
+
+.navigation,
+.bottom,
+.interactive {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 30px;
+  padding-left: 52px;
+  padding-right: 130px;
+  z-index: 10;
+  color: #242CF8;
+}
+.navigation .interactive {
+  align-items: center;
+}
+.navigation .interactive .menu {
+  position: relative;
+  margin-right: 30px;
+  width: 20px;
+  height: 2px;
+  background-color: #242CF8;
+}
+.navigation .interactive .menu:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 20px;
+  height: 2px;
+  background-color: #242CF8;
+}
+.navigation .interactive .menu::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: 5px;
+  background-color: #242CF8;
+}
+.navigation .interactive .busket {
+  position: relative;
+  width: 14px;
+  height: 12px;
+  border: 2px solid #242CF8;
+  margin-left: 30px;
+  background-color: #EACCCD;
+}
+.navigation .interactive .busket::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid #242CF8;
+  z-index: -1;
+}
+
+.logo {
+  font-family: "Abril_Fatface", serif;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.bottom {
+  position: absolute;
+  top: 0;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 48px 0 57px 52px;
+  background-color: #EACCCD;
+  transition: all 0.7s ease-out;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+}
+.bottom.item1 {
+  left: 0;
+  background-image: url("/back-1.7a564f1e.png");
+}
+.bottom.item2 {
+  left: 100%;
+  background-image: url("/back-2.441ea0db.png");
+}
+.bottom.item3 {
+  left: 200%;
+  background-image: url("/back-3.ad502d4a.png");
+}
+
+.title {
+  display: flex;
+  align-items: flex-end;
+  color: #242CF8;
+}
+
+.btn {
+  margin-left: 30px;
+  padding: 20px 30px;
+  font-family: "Abril_Fatface", serif;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: #ffff;
+  background: linear-gradient(to right, #E2999A 50%, #ffff 50%);
+  background-position: 100% center;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  color: #242CF8;
+  border: none;
+  transition: all 0.2s ease-in;
+}
+.btn:hover {
+  cursor: pointer;
+  color: #ffff;
+  background-position: 0 center;
+}
+
+.gallery {
+  list-style-type: none;
+  display: flex;
+  width: 410px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 60px;
+  background-color: #ffff;
+}
+.gallery .text {
+  display: flex;
+  flex-direction: column;
+  padding: 49px 21px 20px 24px;
+}
+.gallery .text h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: "Abril_Fatface", serif;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.6;
+}
+.gallery .text p {
+  margin-top: 0px;
+  font-family: "Poppins Regular";
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=/styles.434540e1.css.map */

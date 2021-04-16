@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html"
   },
-  "author": "Chokocheeks",
+  "author": "Chokocheeks", 
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.32.8"

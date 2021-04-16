@@ -4,3 +4,9 @@
         url("../fonts/Poppins/Poppins-Regular.ttf") format("opentype");
   font-display: fallback;
 }
+@font-face {
+  font-family: "Abril_Fatface";
+  src:  url("../fonts/Abril_Fatface/AbrilFatface-Regular.woff2") format("woff2"),
+        url("../fonts/Abril_Fatface/AbrilFatface-Regular.ttf") format("opentype");
+  font-display: fallback;
+}
